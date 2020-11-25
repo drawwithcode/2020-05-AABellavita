@@ -33,6 +33,15 @@ function setup() {
 	image(myStitch, width / 2, height / 2, 582, 800);
 	image(myStitchC, width / 2+550, height / 2, 291, 400);
 
+	slider = createSlider(0, 50, 15, 2);
+	slider.style('width', '170px');
+   slider.position(width / 2-550-86, height / 2-76);
+
+}
+
+function draw() {
+	myWeight = slider.value();
+
 	push();
 	strokeWeight(4);
 	fill('#5372A6');
@@ -49,15 +58,6 @@ function setup() {
 	textSize(20);
 	text("Pick colors below.\nUse the slider to\nchange weight.", width/2-550, height/2-155);
 	pop();
-
-	slider = createSlider(0, 50, 15, 2);
-	slider.style('width', '170px');
-   slider.position(width / 2-550-86, height / 2-76);
-
-}
-
-function draw() {
-	myWeight = slider.value();
 
 	push();
 	strokeWeight(4);
